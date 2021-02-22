@@ -1,0 +1,406 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://rsms.me/inter/inter-display.css');
+html {
+    font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+.use-display-font {
+    font-family: 'InterDisplay', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+    .use-display-font {
+        font-family: 'InterDisplay var', sans-serif;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    background: #fcf6f0;
+    color: #1a1a1a;
+}
+
+.navbar {
+    padding: 0;
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    clip-path: url(#wave);
+
+    position: relative;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-left: 25vw;
+    margin-right: 5vw;
+}
+
+.navbar-brand a {
+    font-weight: 600;
+    color: #eee;
+    font-size: 2.75rem;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-buttons a {
+    margin-left: 0.75rem;
+    font-weight: 600;
+    color: #eee;
+    font-size: 2.4rem;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-content {
+        margin: 0;
+    }
+
+    .navbar-buttons {
+        display: none;
+    }
+}
+
+.main {
+    display: flex;
+    margin-left: 5vw;
+    margin-top: 2rem;
+}
+
+.main-sidebar {
+    width: 17vw;
+    margin-right: 3vw;
+}
+
+.main-sidebar-content {
+    display: flex;
+    flex-direction: column;
+
+    position: -webkit-sticky;
+    position: sticky;
+
+    top: 2rem;
+}
+
+.main-content {
+    width: 50vw;
+
+    font-size: 1.2rem;
+}
+
+.main-profilepicbox {
+    margin-bottom: 1rem;
+}
+
+.main-profilepic {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.main-buttonsbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-buttonsbox a {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+
+    /* text-decoration: underline; */
+    /* font-style: italic; */
+    text-decoration: none;
+}
+
+.main-buttonsbox a span {
+    color: #444;
+
+    border-bottom: 1px dotted #333;
+}
+
+.main-buttonsbox a span:hover {
+    color: #222;
+
+    border-bottom: 1px solid #222;
+}
+
+.main-content a {
+    color: #444;
+
+    text-decoration: none;
+    border-bottom: 1px dotted #333;
+
+    transition: 0.1s color;
+}
+
+.main-content a:hover {
+    color: #222;
+
+    border-bottom: 1px solid #222;
+}
+
+.main-divider {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-divider {
+        background: #aaa;
+        height: 1px;
+        width: 100%;
+        display: block;
+        margin: 1.5rem auto;
+    }
+
+    .main {
+        flex-direction: column;
+        margin: 0;
+        width: 80vw;
+        margin: auto;
+        margin-top: 1.5rem;
+    }
+
+    .main-sidebar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-sidebar-content {
+        flex-direction: row;
+
+        position: initial;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .main-profilepicbox {
+        flex: 1;
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    .main-buttonsbox {
+        flex: 2;
+    }
+
+    .main-buttonsbox a {
+        font-size: 1.25rem;
+    }
+}
+
+.main-title {
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 0.8rem;
+}
+
+h1.main-title {
+    font-size: 2rem;
+}
+
+h2.main-title {
+    font-size: 1.6rem;
+}
+
+.main-content p {
+    margin: 0;
+    margin-bottom: 1.2rem;
+}
+
+.main-projects {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    grid-gap: 2rem 1vw;
+    -ms-grid-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: minmax(12rem, auto);
+    grid-auto-rows: minmax(12rem, auto);
+
+    margin-bottom: 1.3rem;
+}
+
+.main-project-card {
+    background: #eee;
+    border: 2px solid #aaa;
+    border-radius: 0.75rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main-project-card-thumb {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+}
+
+.main-project-card-title {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    margin: 0;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+p.main-project-card-desc {
+    padding: 0 1rem;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 1.2rem;
+
+    flex-grow: 1;
+}
+
+.main-project-card-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a.main-project-card-button {
+    font-size: 1.7rem;
+    border-bottom: none;
+
+    color: #444;
+    transition: 0.1s color;
+}
+
+a.main-project-card-button:hover {
+    border-bottom: none;
+
+    color: #222;
+}
+
+@media (max-width: 768px) {
+    .main-projects {
+        -ms-grid-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+svg {
+    width: 0;
+    height: 0;
+}
+
+/* #wave > path {
+    animation-name: waves;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} */
+
+#wave > path {
+    -webkit-animation: 8s ease-in-out 0s infinite alternate waves;
+    -moz-animation: 8s ease-in-out 0s infinite alternate waves;
+    -o-animation: 8s ease-in-out 0s infinite alternate waves;
+    -ms-transition: 8s ease-in-out 0s infinite alternate waves;
+    animation: 8s ease-in-out 0s infinite alternate waves;
+}
+
+@-webkit-keyframes waves {
+    from {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+    to {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+}
+
+@-moz-keyframes waves {
+    from {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+    to {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+}
+
+@-o-keyframes waves {
+    from {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+    to {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+}
+
+@-ms-keyframes waves {
+    from {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+    to {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+}
+
+@keyframes waves {
+    from {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 c 0 0 0.125 0.15 0.25 0 c 0.125 -0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+    to {
+        d: path(
+            'm 0 0 v 0.88 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 c 0 0 0.125 -0.15 0.25 0 c 0.125 0.15 0.25 0 0.25 0 l 0 -0.88 z'
+        );
+    }
+}
