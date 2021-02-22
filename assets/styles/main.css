@@ -101,6 +101,8 @@ body {
     display: flex;
     margin-left: 5vw;
     margin-top: 2rem;
+
+    margin-bottom: 5rem;
 }
 
 .main-sidebar {
