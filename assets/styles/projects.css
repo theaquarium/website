@@ -2,75 +2,82 @@
     background: #eba7b2;
 }
 
-.main-projects {
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
-    grid-gap: 2rem 1vw;
-    -ms-grid-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: minmax(12rem, auto);
-    grid-auto-rows: minmax(12rem, auto);
-
-    margin-bottom: 1.3rem;
+.tag {
+    font-family: 'InterDisplay', sans-serif;
 }
-
-.main-project-card {
-    background: #eee;
-    border: 2px solid #aaa;
-    border-radius: 0.75rem;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.main-project-card-thumb {
-    width: 100%;
-    height: 8rem;
-    object-fit: cover;
-}
-
-.main-project-card-title {
-    padding: 0 1rem;
-    font-size: 1.1rem;
-    margin: 0;
-    margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+@supports (font-variation-settings: normal) {
+    .tag {
+        font-family: 'InterDisplay var', sans-serif;
+    }
 }
 
 p.main-project-card-desc {
-    padding: 0 1rem;
-    font-size: 1rem;
-    margin: 0;
-    margin-bottom: 1.2rem;
-
-    flex-grow: 1;
+    margin-bottom: 0.7rem;
 }
 
-.main-project-card-buttons {
+.main-project-card-tags {
+    /* Make padding a little smaller here to compensate for more margin in tags */
+    padding: 0 0.9rem;
+    margin-bottom: 0.7rem;
+
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-a.main-project-card-button {
-    font-size: 1.7rem;
-    border-bottom: none;
-
-    color: #444;
-    transition: 0.1s color;
+.tag {
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    padding: 0.1rem 0.3rem;
+    margin: 0.1rem;
 }
 
-a.main-project-card-button:hover {
-    border-bottom: none;
+.tag-python {
+    color: #eee;
+    background: #4958e6;
+}
 
+.tag-js {
     color: #222;
+    background: #ffc505;
 }
 
-@media (max-width: 768px) {
-    .main-projects {
-        -ms-grid-columns: repeat(2, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-    }
+.tag-html {
+    color: #eee;
+    background: #f0584d;
+}
+
+.tag-css {
+    color: #eee;
+    background: #4a7ad4;
+}
+
+.tag-ts {
+    color: #eee;
+    background: #023657;
+}
+
+.tag-react {
+    color: #222;
+    background: #61dafb;
+}
+
+.tag-php {
+    color: #eee;
+    background: #8892bf;
+}
+
+.tag-node {
+    color: #eee;
+    background: #53a244;
+}
+
+.tag-linux {
+    color: #eee;
+    background: #222;
+}
+
+.tag-mongo {
+    color: #eee;
+    background: #13aa52;
 }
