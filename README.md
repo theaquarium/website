@@ -1,6 +1,6 @@
 # Website
 
-My website. See it at [peter.vashevko.com](https://peter.vashevko.com).
+My website. See it at [leah.vashevko.com](https://leah.vashevko.com).
 
 ## License
 
