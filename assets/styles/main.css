@@ -392,9 +392,19 @@ a.main-project-card-button:hover {
     background: #222;
 }
 
+.tag-expo {
+    color: #eee;
+    background: #151718;
+}
+
 .tag-mongo {
     color: #eee;
     background: #13aa52;
+}
+
+.tag-wordpress {
+    color: #eee;
+    background: #0073aa;
 }
 
 svg {
