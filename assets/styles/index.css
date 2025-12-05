@@ -1,3 +1,158 @@
-.navbar {
-    background: #688f6a;
+@font-face {
+    font-family: 'Practice Sans';
+    font-weight: 400;
+    src: url(/assets/fonts/PracticeSans-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Practice Sans';
+    font-weight: 500;
+    src: url(/assets/fonts/PracticeSans-Medium.otf);
+}
+
+@font-face {
+    font-family: 'Practice Sans';
+    font-weight: 600;
+    src: url(/assets/fonts/PracticeSans-Semibold.otf);
+}
+
+@font-face {
+    font-family: 'Practice Sans';
+    font-weight: 700;
+    src: url(/assets/fonts/PracticeSans-Bold.otf);
+}
+
+html {
+    font-family: 'Practice Sans', -apple-system, system-ui, BlinkMacSystemFont,
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+    background: #f3f3f3;
+    color: #1a1a1a;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    cursor: url('/assets/images/cursor-black.png'), auto;
+}
+
+a {
+    cursor: url('/assets/images/cursor-blue.png'), pointer;
+}
+
+#name {
+    position: absolute;
+    /* top: 10px; */
+    left: 50%;
+    /* top: 10%; */
+    transform: translate(-50%, -23%);
+    font-size: min(calc(100vw / 6), 200px);
+    font-weight: 400;
+    /* font-style: italic; */
+    margin: 0;
+    white-space: nowrap;
+    line-height: 0.9;
+    letter-spacing: -5px;
+    /* text-transform: lowercase; */
+
+    z-index: -1;
+
+    /* color: #0b2584; */
+    color: #596f844a;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+
+    margin: 85px auto;
+    padding: 0 100px;
+    max-width: 900px;
+
+    z-index: 0;
+}
+
+#portrait {
+    width: 100%;
+    grid-row-start: 1;
+    grid-column: 9 / span 4;
+}
+
+#words {
+    margin-top: 60px;
+    grid-row-start: 1;
+    grid-column: 1 / span 7;
+
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    #name {
+        transform: translate(-50%, 0%);
+        position: relative;
+        text-align: center;
+    }
+
+    #content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+
+        padding: 0 30px;
+
+        margin-top: 0px;
+    }
+
+    #portrait {
+        grid-column: 1 / span 1;
+        grid-row-start: 1;
+        width: 70%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    #words {
+        grid-column: 1 / span 1;
+        grid-row-start: 2;
+        margin: 0;
+    }
+}
+
+#words a {
+    color: #0b2584;
+}
+
+#words a.music-link {
+    color: inherit;
+}
+
+#words h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: -10px;
+}
+
+#words li + li {
+    margin-top: 0.5rem;
+}
+
+#words li::marker {
+    font-size: 0.85em;
+    content: '✦    ';
+    color: #000c;
+}
+
+#words li code {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9em;
+}
+
+#words li a {
+    color: inherit;
 }
