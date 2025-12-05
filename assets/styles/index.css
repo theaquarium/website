@@ -37,11 +37,11 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    cursor: url('/assets/images/cursor-black.png'), auto;
+    cursor: url('/assets/images/cursor-black.png') 12 12, auto;
 }
 
 a {
-    cursor: url('/assets/images/cursor-blue.png'), pointer;
+    cursor: url('/assets/images/cursor-blue.png') 12 12, pointer;
 }
 
 #name {
