@@ -150,8 +150,8 @@ a {
 #words li::before {
     position: absolute;
     left: -1.5em;
-    top: 0.17em;
-    font-size: 0.85em;
+    top: 0.15em;
+    font-size: 0.9em;
     content: '✦';
     color: #000c;
 }
