@@ -142,9 +142,17 @@ a {
     margin-top: 0.5rem;
 }
 
-#words li::marker {
+#words li {
+    list-style-type: none;
+    position: relative;
+}
+
+#words li::before {
+    position: absolute;
+    left: -1.5em;
+    top: 0.17em;
     font-size: 0.85em;
-    content: '✦    ';
+    content: '✦';
     color: #000c;
 }
 
