@@ -47,7 +47,7 @@ a {
 #name {
     position: absolute;
     /* top: 10px; */
-    left: 50%;
+    left: 49.5%;
     /* top: 10%; */
     transform: translate(-50%, -23%);
     font-size: min(calc(100vw / 6), 200px);
@@ -81,6 +81,8 @@ a {
     width: 100%;
     grid-row-start: 1;
     grid-column: 9 / span 4;
+
+    margin-top: 60px;
 }
 
 #words {
